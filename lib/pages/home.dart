@@ -16,12 +16,27 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Column(
           children: [
-            const Text("MEMES:)"),
+            const Text(
+              "MEMES",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            //controller to toggle using pageview
+            //page view, playlist half completed
             Container(
                 height: 500,
-                child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [const Cards(), const Cards(), const Cards()])),
+                child: ListView(scrollDirection: Axis.horizontal, children: [
+                  const Cards(
+                    image: 1,
+                  ),
+                  const Cards(
+                    image: 2,
+                  ),
+                  const Cards(
+                    image: 3,
+                  )
+                ])),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
